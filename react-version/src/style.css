@@ -65,3 +65,10 @@ h1{
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
+
+.loading{
+  font-size: 4em;
+  /* text-emphasis: ; */
+  top: 50%;
+  left: 50%
+}

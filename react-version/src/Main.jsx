@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Main({text}) {
+function Main({text, isLoaded}) {
   let arr =
     [text["Biology"], text["Physical Description"],
       text["Habitat"], text["Location"], text["Taste"],
@@ -9,11 +9,17 @@ function Main({text}) {
     if (!array) arr.splice(index, 1)
   })
 
-  let infoArray=arr.join(" ")
- 
+  let infoArray = arr.join(" ")
+  
+  if (infoArray == null) {
+    return (
+      <div>Loding...</div>
+    )
+  }
+  
   return ( 
-    <div className='info'>     
-      {document.querySelector(".info").innerHTML=infoArray}
+    <div id='info'>     
+    {document.getElementById("info").innerHTML=infoArray}
     </div>
   );
 }

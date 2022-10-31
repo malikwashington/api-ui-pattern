@@ -50,12 +50,10 @@ function App() {
       <Title name={feesh[index]} />
       <section>
         <div className="prev" onClick={decrease}>-</div>
-        <div className="info">
           <Gallery img={feesh[index]["Image Gallery"]} />
-        </div>
         <div className="next" onClick={increase}>+</div>
       </section>
-      <Main text={feesh[index]} />
+      {/* <Main text={feesh[index]} isLoaded={isLoaded} /> */}
     </div>
   );
 }
